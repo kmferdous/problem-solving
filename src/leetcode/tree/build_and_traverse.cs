@@ -66,9 +66,9 @@ public void InOrderPrint(TreeNode node)
     if (node == null)
         return;
 
-    PreOrderPrint(node.left);
+    InOrderPrint(node.left);
     Console.Write(node.val + " ");
-    PreOrderPrint(node.right);
+    InOrderPrint(node.right);
 }
 
 public void PostOrderPrint(TreeNode node)
@@ -76,7 +76,7 @@ public void PostOrderPrint(TreeNode node)
     if (node == null)
         return;
 
-    PreOrderPrint(node.left);
-    PreOrderPrint(node.right);
+    PostOrderPrint(node.left);
+    PostOrderPrint(node.right);
     Console.Write(node.val + " ");
 }
